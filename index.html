@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Intelligent medical classifier">
+    <meta name="author" content="Landon Smith">
+
+    <title>AIMES: Welcome!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/grayscale.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">AIMES</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Mission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#video">Video</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#projects">How It Works</a>
+            </li>
+            <li class="nav-item">
+              <a href="login" class="nav-link js-scroll-trigger"><b>Login</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <h1 class="mx-auto my-0 text-uppercase">AIMES</h1>
+          <h2 class="mx-auto mt-2 mb-5">Assitive Immediate Medical Evaluation Software</h2>
+          <a href="register" class="btn btn-primary js-scroll-trigger">Register</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-white mb-4">Our Mission</h2>
+            <p class="text-white-50">If you have a heartbeat and measureable blood glucose, we are here for you.
+                                     Whether you are a doctor looking for fast and effective assistance, a patient trying to better
+                                     understand your diagnosis, a parent with no idea what ails your child, or anyone in between, AIMES
+                                     is ready to help. We strive to make immediate medical analysis accessible to everyone—because everyone
+                                     deserves a helping hand and a second pair of eyes can never hurt.<br>-Landon Smith and Steven Walz,
+                                     Founders</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+      <br><br>
+      <div class="container">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/p7PlqEbKvNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+      <div class="container">
+
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-xl-8 col-lg-7">
+            <img class="img-fluid mb-3 mb-lg-0" src="/static/img/coverphoto.jpg" alt="">
+          </div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h4>How It Works</h4>
+              <p class="text-primary-50 mb-0">AIMES uses state of the art techniques for analysis and dimesionality reduction, and has
+                                              trained on over 25,000 datapoints to provide users with straight-forward and comprehensive
+                                              feedback. Simply upload your symptoms or medical file and recieve immediate evaluation!
+                                              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <!-- https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjG0sT2_4vfAhWxmuAKHc0NAP4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F2220606%2Fcase_files_folder_health_history_medical_records_icon&psig=AOvVaw1OMU17PegaYlFQ4uw7BgsH&ust=1544213017342604 -->
+            <img class="img-fluid" src="/static/img/medicaldata.png" alt="">
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white">Data Generation</h4>
+                  <p class="mb-0 text-white-50">AIMES' first goal is to find and format medical data with which to train the algorithms.
+                  Most of this data is pulled directly from thoroughly-vetted medical files, and the rest is simualted along probability
+                  distributions fine-tuned to the most recent medical consnensus. This data exists in between 11 and 20 dimensions, and
+                  is sculpted to best train our learning system.</p>
+                  <hr class="d-none d-lg-block mb-0 ml-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Two Row -->
+        <div class="row justify-content-center no-gutters">
+          <div class="col-lg-6">
+            <!-- https://img.icons8.com/ios/1600/learning.png.jpg -->
+            <img class="img-fluid" src="/static/img/learning.png" alt="">
+          </div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right">
+                  <h4 class="text-white">Machine Learning</h4>
+                  <p class="mb-0 text-white-50">We spared no detail in the design of AIMES, carefully crafting an AI that is both
+                  intelligent and efficient. Our "Random Forest Classifier" is geared for rapid and accurate binary classification,
+                  screening for disease or unhealthy habits in just milliseconds. The algorithm creates a host of binary decisions
+                  trees as it parses through the data, with each "tree" casting a vote toward the final decision at their terminal node.</p>
+                  <hr class="d-none d-lg-block mb-0 mr-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section bg-fade">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">Harvard University</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">
+                  <a href="mailto:landonsmith@college.harvard.edu">landonsmith@college.harvard.edu</a><br>
+                  <a href="mailto:stevenwalz@college.harvard.edu">stevenwalz@college.harvard.edu</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4">
+                <a href="tel:13477214689">+1 (347) 721-4689</a><br>
+                <a href="tel:16176785022">+1 (617) 678-5022</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+          <a href="https://www.facebook.com/AIMES-Medical-Diagnostics-215470586009761/?view_public_for=215470586009761" class="mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://github.com/landjbs" class="mx-2">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; AIMES 2018
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/static/js/grayscale.min.js"></script>
+
+  </body>
+
+</html>

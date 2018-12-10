@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Intelligent medical classifier">
+    <meta name="author" content="Landon Smith">
+
+    <title>AIMES: Full Scan</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/grayscale.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="homepage">AIMES</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="quickscan">Quick Scan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="fullscan">Full Scan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="help">Help</a>
+            </li>
+            <li class="nav-item">
+              <a href="/logout" class="nav-link js-scroll-trigger"><b>Log Out</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <form class="scan-form" action="/fullscan" method="post">
+              <h2>Full Scan</h2>
+              <p><a href="quickscan">Don't have access to your medical file? Try a quick scan.</a></p><br>
+            <p>Input your medical file below!</a>.</p>
+            <!--<div class="fileUpload">
+                <input type="file" name="medFile" id="file" class="inputfile" />
+                <label for="file"><i class="fa fa-cloud-upload" style="font-size:48px;color: #87CEFA"></i></label>
+            </div>-->
+             <div>
+              <b>Age (years)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="age" placeholder="40" type="float">
+              </div>
+              <b>Diastolic Blood Pressure (mmHg)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="bp" placeholder="80" type="float">
+              </div>
+              <b>Red Blood Cells</b>
+              <div class="form-group">
+                <input type="radio" name="rbc" value="1"> Normal<br><input type="radio" name="rbc" value="0"> Abnormal
+              </div>
+              <b>Pus Cell</b>
+              <div class="form-group">
+                <input type="radio" name="pc" value="1"> Normal<br><input type="radio" name="pc" value="0"> Abnormal
+              </div>
+              <b>Pus Cell Clumps</b>
+              <div class="form-group">
+                <input type="radio" name="pcc" value="1"> Present<br><input type="radio" name="pcc" value="0"> Not Present
+              </div>
+              <b>Bacteria</b>
+              <div class="form-group">
+                <input type="radio" name="ba" value="1"> Present<br><input type="radio" name="ba" value="0"> Not Present
+              </div>
+              <b>Blood Glucose Random (mg/dL)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="bgr" placeholder="100" type="float">
+              </div>
+              <b>Blood Urea (mg/dL)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="bu" placeholder="10" type="float">
+              </div>
+              <b>Serum Creatinine (mg/dL)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="sc" placeholder="0.75" type="float">
+              </div>
+              <b>Sodium (mEq/L)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="sod" placeholder="150" type="float">
+              </div>
+              <b>Potassium (mEq/L)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="pot" placeholder="4.2" type="float">
+              </div>
+              <b>Hemoglobin (g)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="hemo" placeholder="10" type="float">
+              </div>
+              <b>Packed Cell Volume</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="pcv" placeholder="50" type="float">
+              </div>
+              <b>White Blood Cell Count (cells/cmm)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="wbcc" placeholder="8000" type="float">
+              </div>
+              <b>Red Blood Cell Count (millions/cmm)</b>
+              <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="rbcc" placeholder="5.3" type="float">
+              </div>
+              <b>Hypertension</b>
+              <div class="form-group">
+                <input type="radio" name="htn" value="1"> Yes<br><input type="radio" name="htn" value="0"> No
+              </div>
+              <b>Diabetes Mellitus</b>
+              <div class="form-group">
+                <input type="radio" name="dm" value="1"> Yes<br><input type="radio" name="dm" value="0"> No
+              </div>
+              <b>Coronary Artery</b>
+              <div class="form-group">
+                <input type="radio" name="cad" value="1"> Yes<br><input type="radio" name="cad" value="0"> No
+              </div>
+              <b>Appetite</b>
+              <div class="form-group">
+                <input type="radio" name="appet" value="1"> Good<br><input type="radio" name="appet" value="0"> Poor
+              </div>
+              <b>Pedal Edema</b>
+              <div class="form-group">
+                <input type="radio" name="pe" value="1"> Yes<br><input type="radio" name="pe" value="0"> No
+              </div>
+              <b>Anemia</b>
+              <div class="form-group">
+                <input type="radio" name="ane" value="1"> Yes<br><input type="radio" name="ane" value="0"> No
+              </div>
+            </div>
+              <br><br>
+              <center><button class="btn btn-primary" type="submit">Scan</button></center>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section bg-fade">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">Harvard University</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">
+                  <a href="mailto:landonsmith@college.harvard.edu">landonsmith@college.harvard.edu</a><br>
+                  <a href="mailto:stevenwalz@college.harvard.edu">stevenwalz@college.harvard.edu</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4">
+                <a href="tel:13477214689">+1 (347) 721-4689</a><br>
+                <a href="tel:16176785022">+1 (617) 678-5022</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+          <a href="https://www.facebook.com/AIMES-Medical-Diagnostics-215470586009761/?view_public_for=215470586009761" class="mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://github.com/landjbs" class="mx-2">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; AIMES 2018
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/static/js/grayscale.min.js"></script>
+
+  </body>
+
+</html>
